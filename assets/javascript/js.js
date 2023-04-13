@@ -119,7 +119,7 @@ $(document).ready(function() {
             studentBar.append('<button id="addtempstudent" class="addstudent">add</button>');
             blockSpecialCharacters('#tempname');
             $('#addtempstudent').click(function() {
-                if ($('#tempname').val()) {
+                if ($('#tempname').length()) {
                     var studentName = $('#tempname').val();
                     $('#tempname').remove();
                     $('#addtempstudent').remove();
@@ -131,7 +131,7 @@ $(document).ready(function() {
         }
     });
     $('#permstudent').click(function() {
-        if (!($("#permname").val())) {
+        if (!($("#permname").length())) {
         studentBar.append('<input id="permname">');
         studentBar.append('<button id="addpermstudent" class="addstudent">add</button>');
         blockSpecialCharacters('#permname');
