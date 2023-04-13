@@ -94,13 +94,12 @@ $(document).ready(function() {
         location.href = '?class=' + classname;
     })
 
-    $('#export').click(function() {
-        let clipboard = confirm('Press OK to copy the code to the clipboard. Use it to transfer to another computer, or to recover an existing class \n\n' + JSON.stringify(students))
-        if (clipboard == true) {
-            $(document).focus();
-            setTimeout(async()=>
-                await window.navigator.clipboard.writeText(JSON.stringify(students)), 100)
-        }
+    $('#export').click( async function() {
+        await window.navigator.clipboard
+            .writeText(JSON.stringify(students))
+            .then(() => {
+                alert('Use this to transfer students to another computer, or to recover an existing class \n\n' + JSON.stringify(students))
+            })
     })
 
     $('#changeClass').click(function() {
