@@ -95,8 +95,9 @@ $(document).ready(function() {
     })
 
     $('#export').click( async function() {
+        let temp = students;
         if (students.includes('Add Permanant Students.')) {
-            let temp = tempList.slice(tempList.indexOf('Add Permanant Students.'), 1)
+            let temp = students.slice(students.indexOf('Add Permanant Students.'), 1)
         }
         await window.navigator.clipboard
             .writeText(JSON.stringify(temp))
