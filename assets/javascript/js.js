@@ -112,6 +112,7 @@ $(document).ready(function() {
 
     var studentBar = $('#students')
     var absentBar = $('#students #absent #aswitches');
+    if (students.includes("Add Permanant Students.")) $('#tempstudent').remove()
     $('#tempstudent').click(function() {
         if (!($("#tempname").length) && !($("#permname").length)) {
             studentBar.append('<input id="tempname">');
