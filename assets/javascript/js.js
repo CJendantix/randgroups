@@ -87,6 +87,10 @@ $(document).ready(function() {
     
     $('#import').click(function() {
         let json = prompt('Class Code');
+        if (json == '[]') {
+            alert("This is an empty class?!")
+            return
+        }
         let classname = prompt('Save to what class name')
         
         students = JSON.parse(json);
