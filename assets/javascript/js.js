@@ -123,7 +123,9 @@ $(document).ready(function() {
             studentBar.append('<button id="addtempstudent" class="addstudent">add</button>');
             blockSpecialCharacters('#tempname');
             $('#addtempstudent').click(function() {
+                console.log('a')
                 if ($('#tempname').length()) {
+                    console.log('b')
                     var studentName = $('#tempname').val();
                     $('#tempname').remove();
                     $('#addtempstudent').remove();
