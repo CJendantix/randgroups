@@ -96,13 +96,12 @@ $(document).ready(function() {
 
     $('#export').click( async function() {
         if (students.includes('Add Permanant Students.')) {
-            alert('You do not have any permanant students!')
-            return
+            let temp = tempList.slice(tempList.indexOf('Add Permanant Students.'), 1)
         }
         await window.navigator.clipboard
             .writeText(JSON.stringify(temp))
             .then(() => {
-                alert('Use this to transfer students to another computer, or to recover an existing class \n\n' + JSON.stringify(students))
+                alert('Use this to transfer students to another computer, or to recover an existing class \n\n' + JSON.stringify(temp))
             })
     })
 
