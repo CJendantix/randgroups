@@ -120,12 +120,12 @@ $(document).ready(function() {
 
     var studentBar = $('#students')
     var absentBar = $('#students #absent #aswitches');
-    studentBar.scroll(function () {
-        absentBar.scrollTop($(this).scrollTop());
-    })
-    absentBar.scroll(function () {
-        studentBar.scrollTop($(this).scrollTop());
-    })
+    $("#students").scroll(function () {
+        $("#students #absent").scrollTop($(this).scrollTop());
+    });
+    $("#students #absent").scroll(function () {
+        $("#students").scrollTop($(this).scrollTop());
+    });
     if (students.includes("Add Permanant Students.")) {$('#tempstudent').remove()}
     $('#tempstudent').click(function() {
         if (!($("#tempname").length) && !($("#permname").length)) {
