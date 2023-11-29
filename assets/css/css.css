@@ -107,10 +107,13 @@ button:active {
   background-color: #171717;
 }
 
+#students {
+  overflow-y: hidden;
+}
+
 #students #absent {
     margin-left: 160px;
     background-color: #1f1f1f;
-    overflow-y: hidden;
 }
 
 .addstudent {
