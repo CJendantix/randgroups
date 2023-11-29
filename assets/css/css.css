@@ -108,7 +108,13 @@ button:active {
 }
 
 #students {
-  overflow-y: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+#content::-webkit-scrollbar {
+  display: none; /* Chrome and Chromium based browsers */
 }
 
 #students #absent {
