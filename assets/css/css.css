@@ -122,10 +122,6 @@ button:active {
     background-color: #1f1f1f;
 }
 
-#students #absent #filler {
-  margin-bottom: 24px;
-}
-
 .addstudent {
   margin: 0;
   margin-top: 10px;
@@ -230,7 +226,7 @@ input:checked + .slider:before {
 }
 
 #aswitches {
-  margin-top: 172px;
+  margin-top: 158px;
 }
 
 #external {
