@@ -120,9 +120,12 @@ $(document).ready(function() {
 
     var studentBar = $('#students')
     var absentBar = $('#students #absent #aswitches');
-    studentBar.on('scroll', function () {
-        console.log('a')
-    });
+    studentBar.scroll(function () {
+        absentBar.scrollTop($(this).scrollTop());
+    })
+    absentBar.scroll(function () {
+        studentBar.scrollTop($(this).scrollTop());
+    })
     if (students.includes("Add Permanant Students.")) {$('#tempstudent').remove()}
     $('#tempstudent').click(function() {
         if (!($("#tempname").length) && !($("#permname").length)) {
