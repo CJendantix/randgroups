@@ -113,7 +113,7 @@ button:active {
   -ms-overflow-style: none;  /* IE and Edge */
 }
 
-#content::-webkit-scrollbar {
+#students::-webkit-scrollbar {
   display: none; /* Chrome and Chromium based browsers */
 }
 
