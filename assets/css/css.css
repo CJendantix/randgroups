@@ -118,8 +118,12 @@ button:active {
 }
 
 #students #absent {
-    margin-left: 160px;
-    background-color: #1f1f1f;
+  margin-left: 160px;
+  background-color: #1f1f1f;
+}
+
+#students #absent #filler {
+  margin-top: 26;
 }
 
 .addstudent {
