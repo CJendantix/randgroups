@@ -25,7 +25,6 @@ p {
 }
 
 .bottombar {
-  height: 110px;; /* Full-height: remove this if you want "auto" height */
   width: 100%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   bottom: 0; /* Stay at the top */
@@ -33,6 +32,7 @@ p {
   background-color: #111; /* Black */
   overflow-y: hidden; /* Disable vertical scroll */
   padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .bottombar button {
