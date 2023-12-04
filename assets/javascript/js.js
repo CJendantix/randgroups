@@ -219,8 +219,9 @@ $(document).ready(function() {
             }
             var increment = 0;
             for (let x = 0; x < numofgroups; x++) {
+                randomizeGroups = nonRepeatingRandomNums(0, numofgroups)[x]
                 for (let y = 0; y < students.length / numofgroups; y++) {
-                    student_group[randomStudents[increment]] = x
+                    student_group[randomStudents[increment]] = randomizeGroups
                     if (student_group.hasOwnProperty('undefined')) {
                         delete student_group['undefined']
                     }
